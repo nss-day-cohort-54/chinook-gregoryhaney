@@ -1,5 +1,5 @@
-SELECT  e.FirstName AS EmpFirst, 
-        e.LastName AS EmpLast, 
+SELECT  e.FirstName || " " || 
+        e.LastName AS EmpName, 
         SUM(i.Total) AS TotalSales
 FROM Employee AS e
 JOIN Customer AS c

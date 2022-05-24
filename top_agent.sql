@@ -1,9 +1,8 @@
 SELECT  MAX(TotalSales) AS SalesLeader, 
-        First, 
-        Last
+        Name
 FROM (
-    SELECT  e.FirstName AS First,
-            e.LastName AS Last,
+    SELECT  e.FirstName || " " ||
+            e.LastName AS Name,
             SUM(i.Total) AS TotalSales
     FROM Employee AS e
     JOIN Customer AS c

@@ -1,4 +1,5 @@
-SELECT e.FirstName, e.LastName, InvoiceId
+SELECT  e.FirstName || " " || e.LastName AS EmpName,
+        InvoiceId
 FROM
 (
     SELECT  i.InvoiceId,

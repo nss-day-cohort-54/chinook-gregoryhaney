@@ -1,3 +1,3 @@
-SELECT e.FirstName, e.LastName, e.EmployeeId, e.Title
+SELECT e.FirstName || " " || e.LastName AS EmpName, e.EmployeeId, e.Title
 FROM Employee AS e
 WHERE e.title LIKE "Sales%Agent";
